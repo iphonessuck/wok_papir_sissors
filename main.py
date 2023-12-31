@@ -1,3 +1,8 @@
+import pygame
+
+window = pygame.display.set_mode((1280, 720))
+running = True
+
 import random
 
 choices = ["rock", "paper", "scissors"]
@@ -17,7 +22,7 @@ if robot_choice == "paper":
 if robot_choice == "rock":
     if choice == "rock":
         print("tie ")
-        print("you are as smart as a tin can idiot")
+        print("you are as smart as a tin can， idiot")
 if robot_choice == "rock":
     if choice == "scissors":
         print("you lost")
@@ -42,4 +47,12 @@ if robot_choice == "scissors":
     if choice == "rock":
         print("you won")
         print("does this make you fell better about yourself?")
+
+while running:
+    clock.tick(60)
+    window.fill((0,0,0))
+    window.blit(orange,(x,y))
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
 
